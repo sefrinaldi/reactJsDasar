@@ -19,6 +19,11 @@ const foods = [
     },
 ]
 
+//Reduce 
+const totalHarga = foods.reduce((total, food)=> {
+    return total + food.harga
+}, 0)
+
 const Map = () => {
     return (
         <div>
@@ -37,6 +42,8 @@ const Map = () => {
                     <li>{index + 1} {food.nama} - harga {food.harga}</li>
                 ))}
             </ul>
+
+            <h3>Total harga : {totalHarga}</h3>
         </div>
     )
 }
